@@ -12,5 +12,8 @@
   "dependencies": {
     "mobx-preact": "^3.0.0",
     "preact": "^10.3.2"
+  },
+  "devDependencies": {
+    "sass": "^1.25.0"
   }
 }
