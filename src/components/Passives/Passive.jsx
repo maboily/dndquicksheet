@@ -2,9 +2,9 @@ import { h } from 'preact';
 
 export const Passive = ({ name, value }) => {
     return (
-        <div>
+        <div className="proficiency-save">
+            <span className="modifier">{value}</span>
             <span>{name}</span>
-            <span>{value}</span>
         </div>
     );
 };

@@ -26,9 +26,12 @@ const SkillSetDummy = [
 export class SkillSet extends Component {
     render () {
         return (
-            <div>
-                <span>Skills</span>
-                {SkillSetDummy.map((skill) => <Skill {...skill} />)}
+            <div className="proficiency-set skill-set">
+                <h2>Skills</h2>
+
+                <div className="skills">
+                    {SkillSetDummy.map((skill) => <Skill {...skill} />)}
+                </div>
             </div>
         );
     }

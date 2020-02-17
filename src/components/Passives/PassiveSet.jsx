@@ -9,8 +9,8 @@ const PassiveSetDataDummy = [
 export class PassiveSet extends Component {
     render () {
         return (
-            <div>
-                <span>Passives</span>
+            <div className="proficiency-set passive-set">
+                <h2>Passives</h2>
                 {PassiveSetDataDummy.map((passive) => <Passive {...passive} />)}
             </div>
         );

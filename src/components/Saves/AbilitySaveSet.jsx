@@ -2,7 +2,7 @@ import { Component, h } from 'preact';
 import { AbilitySave } from './AbilitySave';
 
 const AbilitySaveDataDummy = [
-    { name: 'Strength', modifier: 0, isProficient: false },
+    { name: 'Strength', modifier: 0, isProficient: true },
     { name: 'Dexterity', modifier: 0, isProficient: false },
     { name: 'Constitution', modifier: 0, isProficient: false },
     { name: 'Intelligence', modifier: 0, isProficient: false },
@@ -13,8 +13,9 @@ const AbilitySaveDataDummy = [
 export class AbilitySaveSet extends Component {
     render () {
         return (
-            <div>
-                <span>Ability Saves</span>
+            <div className="proficiency-set ability-save-set">
+                <h2>Ability Saves</h2>
+
                 {AbilitySaveDataDummy.map((abilitySave) => <AbilitySave {...abilitySave} />)}
             </div>
         );

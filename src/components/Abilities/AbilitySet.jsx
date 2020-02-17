@@ -13,7 +13,7 @@ const AbilitySetDummy = [
 export class AbilitySet extends Component {
     render () {
         return (
-            <div>
+            <div className="ability-set">
                 {AbilitySetDummy.map((ability) => <Ability {...ability} />)}
             </div>
         );

@@ -15,16 +15,21 @@ const CharInfoDummy = {
 export class CharBanner extends Component {
     render () {
         return (
-            <div>
-                <span>{CharInfoDummy.maxHp}</span>
-                <span>{CharInfoDummy.characterName}</span>
-                <span>{CharInfoDummy.race}</span>
-                <span>{CharInfoDummy.vision}</span>
+            <div className="char-banner">
+                <div className="hp">{CharInfoDummy.maxHp}</div>
 
-                <span>{CharInfoDummy.ac}</span>
-                <span>{CharInfoDummy.initiativeBonus}</span>
-                <span>{CharInfoDummy.speed}</span>
-                <span>{CharInfoDummy.proficiencyBonus}</span>
+                <div className="personal-info">
+                    <span className="char-name">{CharInfoDummy.characterName}</span>
+                    <span>{CharInfoDummy.race}</span>
+                    <span>{CharInfoDummy.vision}</span>
+                </div>
+
+                <div className="quick-stats">
+                    <span><label>AC</label>{CharInfoDummy.ac}</span>
+                    <span><label>Init.</label>{CharInfoDummy.initiativeBonus}</span>
+                    <span><label>Speed</label>{CharInfoDummy.speed}</span>
+                    <span><label>Prof.</label>{CharInfoDummy.proficiencyBonus}</span>
+                </div>
             </div>
         );
     }

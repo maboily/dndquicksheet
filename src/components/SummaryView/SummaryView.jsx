@@ -6,11 +6,11 @@ import { AbilitySaveSet } from '../Saves/AbilitySaveSet';
 import { PassiveSet } from '../Passives/PassiveSet';
 
 export const SummaryView = () => (
-    <div>
+    <div className="summary-view">
         <CharBanner/>
         <AbilitySet/>
         <AbilitySaveSet/>
-        <SkillSet/>
         <PassiveSet/>
+        <SkillSet/>
     </div>
 );

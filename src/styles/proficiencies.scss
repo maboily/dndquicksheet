@@ -1,0 +1,63 @@
+.proficiency-set {
+  font-size: 0.8rem;
+  width: 100%;
+
+  border-bottom: 2px solid #333;
+
+  h2 {
+    padding: 2px 0;
+
+    background: #333;
+    color: #eee;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .proficiency-save {
+    box-sizing: border-box;
+    display: flex;
+    padding-top: 2px;
+
+    .modifier {
+      padding: 0 4px 0 0;
+      text-align: right;
+      width: 30px;
+    }
+
+    .name {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    &.proficient {
+      background-color: yellow;
+    }
+  }
+}
+
+.ability-save-set, .passive-set {
+  flex-basis: 50%;
+}
+
+.passive-set {
+  box-sizing: border-box;
+
+  border-left: 1px solid #333;
+}
+
+.skill-set {
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+
+    .proficiency-save {
+      flex-basis: 50%;
+      max-width: 50%;
+
+      &:nth-child(even) {
+        border-left: 1px solid #333;
+      }
+    }
+  }
+}

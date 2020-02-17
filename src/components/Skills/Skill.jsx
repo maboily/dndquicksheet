@@ -2,11 +2,9 @@ import { h } from 'preact';
 
 export const Skill = ({ ability, name, modifier, isProficient }) => {
     return (
-        <div>
-            <span>{isProficient ? 'Prof.' : ''}</span>
-            <span>{name}</span>
-            <span>{modifier > 0 ? `+${modifier}` : modifier}</span>
-            <span>({ability})</span>
+        <div className={`proficiency-save ${isProficient ? 'proficient' : ''}`}>
+            <span className="modifier">{modifier > 0 ? `+${modifier}` : modifier}</span>
+            <span className="name">{name} ({ability})</span>
         </div>
     );
 };

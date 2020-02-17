@@ -1,0 +1,44 @@
+.ability-set {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+
+  .ability {
+    box-sizing: border-box;
+    display: flex;
+    flex-basis: 50%;
+
+    border-left: 2px solid #333;
+
+    .score, .modifier {
+      padding: 0 2px;
+    }
+
+    .name {
+      padding: 0 5px;
+      flex-basis: 100%;
+
+      background-color: #333;
+      color: #eee;
+    }
+
+    .score {
+      text-align: right;
+      width: 30px;
+
+      background-color: #333;
+      color: #eee;
+      font-weight: bold;
+    }
+
+    .modifier {
+      text-align: right;
+      width: 50px;
+    }
+  }
+}
