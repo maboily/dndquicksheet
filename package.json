@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel --host 192.168.2.167 src/index.html",
-    "build": "parcel build --public-url . src/index.html"
+    "build": "parcel build src/index.html"
   },
   "author": "Marc-Andre Boily",
   "license": "MIT",
