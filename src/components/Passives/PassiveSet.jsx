@@ -1,17 +1,18 @@
 import { Component, h } from 'preact';
 import { Passive } from './Passive';
-
-const PassiveSetDataDummy = [
-    { name: 'Perception', value: 10 },
-    { name: 'Insight', value: 10 }
-];
+import { useContext } from 'preact/hooks';
+import { CharacterStoreContext } from '../../stores/CharacterStore';
 
 export class PassiveSet extends Component {
     render () {
+        const charStore = useContext(CharacterStoreContext);
+        const char = charStore.character;
+
         return (
             <div className="proficiency-set passive-set">
                 <h2>Passives</h2>
-                {PassiveSetDataDummy.map((passive) => <Passive {...passive} />)}
+                <Passive name='Perception' value={char.passivePerception} />
+                <Passive name='Insight' value={char.passiveInsight} />
             </div>
         );
     }

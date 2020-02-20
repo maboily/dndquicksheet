@@ -1,4 +1,4 @@
-export const Ability = {
+export const AbilityNames = {
     Strength: 'STR',
     Dexterity: 'DEX',
     Constitution: 'CON',

@@ -31,7 +31,9 @@
     }
 
     &.proficient {
-      background-color: yellow;
+      background-color: #666;
+      color: #ddd;
+      font-weight: 900;
     }
   }
 }

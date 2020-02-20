@@ -1,20 +1,16 @@
 import { Component, h } from 'preact';
 import { Ability } from './Ability';
-
-const AbilitySetDummy = [
-    { name: 'STR', score: 0, modifier: 0 },
-    { name: 'DEX', score: 0, modifier: 0 },
-    { name: 'CON', score: 0, modifier: 0 },
-    { name: 'INT', score: 0, modifier: 0 },
-    { name: 'WIS', score: 0, modifier: 0 },
-    { name: 'CHA', score: 0, modifier: 0 },
-];
+import { useContext } from 'preact/hooks';
+import { CharacterStoreContext } from '../../stores/CharacterStore';
 
 export class AbilitySet extends Component {
     render () {
+        const charStore = useContext(CharacterStoreContext);
+        const char = charStore.character;
+
         return (
             <div className="ability-set">
-                {AbilitySetDummy.map((ability) => <Ability {...ability} />)}
+                {char.abilities.map((ability) => <Ability name={ability.name} score={ability.score} modifier={char.getAbilityModifier(ability.name)} />)}
             </div>
         );
     }

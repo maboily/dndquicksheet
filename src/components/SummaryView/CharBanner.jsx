@@ -1,34 +1,28 @@
 import { Component, h } from 'preact';
-
-const CharInfoDummy = {
-    maxHp: 0,
-    characterName: 'IAm A Character',
-    race: 'Half-Orc',
-    vision: 'Darkvision',
-
-    ac: 10,
-    initiativeBonus: 0,
-    speed: '30ft',
-    proficiencyBonus: 2
-};
+import { useContext } from 'preact/hooks';
+import { CharacterStoreContext } from '../../stores/CharacterStore';
+import { AbilityNames } from '../../data/AbilityNames';
 
 export class CharBanner extends Component {
     render () {
+        const charStore = useContext(CharacterStoreContext);
+        const char = charStore.character;
+
         return (
             <div className="char-banner">
-                <div className="hp">{CharInfoDummy.maxHp}</div>
+                <div className="hp">{char.maxHp}</div>
 
                 <div className="personal-info">
-                    <span className="char-name">{CharInfoDummy.characterName}</span>
-                    <span>{CharInfoDummy.race}</span>
-                    <span>{CharInfoDummy.vision}</span>
+                    <span className="char-name">{char.name}</span>
+                    <span>{char.race}</span>
+                    <span>{char.vision}</span>
                 </div>
 
                 <div className="quick-stats">
-                    <span><label>AC</label>{CharInfoDummy.ac}</span>
-                    <span><label>Init.</label>{CharInfoDummy.initiativeBonus}</span>
-                    <span><label>Speed</label>{CharInfoDummy.speed}</span>
-                    <span><label>Prof.</label>{CharInfoDummy.proficiencyBonus}</span>
+                    <span><label>AC</label>{char.ac}</span>
+                    <span><label>Init.</label>{char.getAbilityModifier(AbilityNames.Dexterity)}</span>
+                    <span><label>Speed</label>{char.speed}</span>
+                    <span><label>Prof.</label>{char.proficiency}</span>
                 </div>
             </div>
         );
