@@ -1,0 +1,190 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.summary-view {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.char-banner {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  border-bottom: 2px solid #333;
+}
+.char-banner .hp {
+  text-align: center;
+  width: 60px;
+  font-size: 1.4rem;
+}
+.char-banner .personal-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.char-banner .personal-info .char-name {
+  width: 100%;
+  font-weight: bold;
+}
+.char-banner .quick-stats {
+  display: flex;
+  flex-wrap: wrap;
+  border-left: 1px solid #333;
+}
+.char-banner .quick-stats > span {
+  text-align: center;
+  width: 50%;
+  font-size: 0.8rem;
+}
+.char-banner .quick-stats > span > label {
+  display: block;
+  font-weight: bold;
+}
+.char-banner > div {
+  padding: 3px;
+}
+
+.ability-set {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+}
+.ability-set .ability {
+  box-sizing: border-box;
+  display: flex;
+  flex-basis: 50%;
+  border-left: 2px solid #333;
+}
+.ability-set .ability .score, .ability-set .ability .modifier {
+  padding: 0 2px;
+}
+.ability-set .ability .name {
+  padding: 0 5px;
+  flex-basis: 100%;
+  background-color: #333;
+  color: #eee;
+}
+.ability-set .ability .score {
+  text-align: right;
+  width: 30px;
+  background-color: #333;
+  color: #eee;
+  font-weight: bold;
+}
+.ability-set .ability .modifier {
+  text-align: right;
+  width: 50px;
+}
+
+.proficiency-set {
+  font-size: 0.8rem;
+  width: 100%;
+  border-bottom: 2px solid #333;
+}
+.proficiency-set h2 {
+  padding: 2px 0;
+  background: #333;
+  color: #eee;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.proficiency-set .proficiency-save {
+  box-sizing: border-box;
+  display: flex;
+  padding-top: 2px;
+}
+.proficiency-set .proficiency-save .modifier {
+  padding: 0 4px 0 0;
+  text-align: right;
+  width: 30px;
+}
+.proficiency-set .proficiency-save .name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.proficiency-set .proficiency-save.proficient {
+  background-color: #666;
+  color: #ddd;
+  font-weight: 900;
+}
+
+.ability-save-set, .passive-set {
+  flex-basis: 50%;
+}
+
+.passive-set {
+  box-sizing: border-box;
+  border-left: 1px solid #333;
+}
+
+.skill-set .skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill-set .skills .proficiency-save {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+.skill-set .skills .proficiency-save:nth-child(even) {
+  border-left: 1px solid #333;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+/*# sourceMappingURL=/main.48b3db1d.css.map */
